@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root{
+    /* ### Neutral */
+    --Bright-Blue: hsl(220, 98%, 61%);
+    --Check-Background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+
+
+
+    /* ### Dark Theme */
+    --Very-Dark-Blue: hsl(235, 21%, 11%);
+    --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+    --Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+    --Light-Grayish-Blue: hsl(234, 39%, 85%);
+    --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+    --Very-Dark-Grayish-Blue: hsla(233, 15%, 24%, 0.705);
+    /* --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%); */
+    --header-bg-dark: url("./images/bg-desktop-dark.jpg");
+
+
+    --bg-color-1: var(--Very-Dark-Blue);
+    --bg-color-2: var(--Very-Dark-Desaturated-Blue);
+    /* Most whight color */
+    --text-hover-color: var(--Light-Grayish-Blue-hover);
+    /* Second Most whight color */
+    --text-color-1: var(--Light-Grayish-Blue);
+    /* Thirs Most whight color / grayish-color */
+    --text-color-2: var(--Dark-Grayish-Blue);
+    /* gray + blue color */
+    --text-color-3: var(--Very-Dark-Grayish-Blue);
+    --header-bg: var(--header-bg-dark);
+
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+
+ 
+
+    background-color: var(--bg-color-1);
+    color: var(--text-color-1);
+
+
+    --header-height: 30rem;
+    --todo-width: 55rem;
+    --todo-max-width: 90%;
+   
+
+}
+
+
+body.light-theme{
+
+    /* ### Light Theme */
+    --Very-Light-Gray: #fafafa;
+    --Very-Light-Grayish-Blue: #e4e5f1;
+
+    --text-hover-on-light: #353642;
+    --Very-Dark-Grayish-Blue: #484b6a;
+    --Dark-Grayish-Blue: #9394a5;
+    --Light-Grayish-Blue: #d2d3db;
+    --header-bg-light: url("./images/bg-desktop-light.jpg");
+
+
+    
+    --bg-color-1: var(--Very-Light-Gray);
+    --bg-color-2: #fff;
+    --text-hover-color: var(--Light-Grayish-Blue-hover);
+    --text-color-1: var(--Very-Dark-Grayish-Blue);
+    --text-color-2: var(--Dark-Grayish-Blue);
+    --text-color-3: var(--Light-Grayish-Blue);
+    --header-bg: var(--header-bg-light);
+    --text-hover-color: var(--text-hover-on-light);
+
+
+
+
+
+}
+
+
+/* =========================== */
+/* ### Global Styles Start ###*/
+/* =========================== */
+ul{
+    list-style: none;
+}
+
+button{
+    border:none;
+    display: inline-block;
+    background-color: transparent;
+    cursor: pointer;
+}
+button:focus,
+input:focus{
+    outline: 2px dotted #0060DF;     
+    outline: 2px dotted yellow;     
+    /* outline-width: 10px; */
+}
+body.light-theme button:focus,
+body.light-theme input:focus{
+    outline: 2px dotted #353642;     
+    /* outline-width: 10px; */
+}
+
+
+
+/* =========================== */
+/* ### Global Styles End ###*/
+/* =========================== */
+
+
+
+
+
+
+/* =========================== */
+/* ### Header Start ###*/
+/* =========================== */
+.header{
+    width: 100%;
+    min-height: var(--header-height);
+    padding: 2rem;
+
+    background: var(--header-bg) no-repeat;
+    background-size: cover;
+}
+
+.header__container{
+    width: var(--todo-width);
+    max-width: var(--todo-max-width);
+    margin: 5rem auto  0rem;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2{
+    color: #fff;
+    letter-spacing: 1rem;
+    font-size: 4rem;
+}
+.theme-switcher{
+    padding: 0.5rem;
+}
+/* =========================== */
+/* ### Header End ###*/
+/* =========================== */
+
+
+
+
+
+
+/* =========================== */
+/* ### Todo-section Start ###*/
+/* =========================== */
+.todo-section{
+    padding: 0rem 2rem 2rem;
+    /* min-height: calc(100vh - var(--header-height) - 10rem); */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo{
+    width: var(--todo-width);
+    max-width: var(--todo-max-width);
+    margin: -15rem 0rem 3rem;
+    /* transform:translate(0rem, -18rem); */
+
+
+    --border-radius: 4px;
+    --height: 3rem;
+    --todo-item-padding-y: 2rem;
+    --todo-item-padding-x: 2rem;
+}
+.todo > p{
+    text-align: center;
+    color: var(--text-color-2);
+    font-size: 1.4rem;
+    margin-top: 4rem;
+    user-select: none;
+    -webkit-user-drag: none;
+
+}
+.todo > p:hover{
+    color: var(--text-hover-color);
+}
+
+.todo__form{
+    width: 100%;
+    margin-bottom: 2rem;
+
+    background-color: var(--bg-color-2);
+    border-radius: var(--border-radius);
+
+    display: flex;
+    position: relative;
+
+}
+
+.todo__input{
+    padding: calc(var(--todo-item-padding-y) + 0.5rem) var(--todo-item-padding-x);
+    padding-left: calc(6rem);
+
+    border-radius: var(--border-radius);
+    border:none;
+
+    background-color: transparent;
+    color: var(--text-color-1);
+    font-size: 1.8rem;
+
+
+    flex-grow: 1;
+}
+.todo__list{
+    width: 100%;
+    margin-top: 2rem;
+    border-radius: var(--border-radius);
+
+    box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.5);
+
+}
+body.light-theme .todo__list{
+    box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.3);
+
+}
+
+.todo__item{
+    /* margin: 3px 0rem; */
+    padding: var(--todo-item-padding-y) var(--todo-item-padding-y) var(--todo-item-padding-y) 0rem;
+    
+    background-color: var(--bg-color-2);
+    border-top: 1px solid var(--text-color-3);
+    
+    display: flex;
+    align-items: center;
+
+}
+.todo__checkbox{
+    display: inline-block;
+    margin: 0rem 2rem;
+    height: 2rem;
+    width: 2rem;
+    transform: scale(1.3);
+    /* background: var(--text-color-3); */
+    background: var(--Check-Background);
+
+    border-radius: 100%;
+
+    position: relative;
+    opacity: 0.3;
+}
+
+.todo__checkbox::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    --offset: 0.5px;
+    top: var(--offset);
+    left: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    background-color: var(--bg-color-2);
+    border-radius: 100%;
+    transition: background 0.3s ease-out;
+}
+
+.todo__checkbox:hover{
+    opacity: 1;
+}
+.todo__checkbox:focus{
+    opacity: 1;
+}
+.todo__task{
+    padding: 0.5rem 0rem;
+}
+.todo__task:hover .todo__checkbox{
+    opacity: 1;
+}
+
+.todo__checkbox--checked{
+    background: var(--Check-Background);
+    opacity: 1;
+
+}
+
+.todo__checkbox--checked::before{
+    content: url("./images/icon-check.svg");
+
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.todo__btn-delete{
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.todo__item:hover .todo__btn-delete{
+    opacity: 1;
+}
+.todo__btn-delete:focus{
+    opacity: 1;
+}
+.todo__checkbox--input{
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%) scale(1.3);
+
+}
+
+
+
+
+.todo__item:hover .todo__task{
+    color: var(--text-hover-color);
+    cursor: pointer;
+}
+.todo__btn-delete{
+    margin-left: auto;
+}
+
+.todo__item:first-child{
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-top: none;
+}
+.todo__item:last-child{
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+.todo__item--footer > p{
+    color: var(--text-color-2);
+    font-size: 1.4rem;
+}
+
+.todo__btns button {
+    font-weight: 700;
+    margin: 0rem 0.5rem;
+}
+
+.todo__btns  button,
+.todo__btn-clear{
+    color: var(--text-color-2);
+
+}
+.todo__btns  button:hover,
+.todo__btn-clear:hover{
+    color: var(--text-hover-color);
+}
+
+.todo__btns > button.btn-active{
+    color: var(--Bright-Blue);
+}
+.todo__btn-clear{
+    font-size: 1.4rem;
+    font-weight: 400;
+
+}
+/* =========================== */
+/* ### Todo-section End ###*/
+/* =========================== */

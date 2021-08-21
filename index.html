@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Start -->
+  <header class="header">
+    <div class="header__container">
+      <h2>TODO</h2>
+      <button class="theme-switcher">
+        <img src="./images/icon-sun.svg" alt="Sun icon for theme switcher">
+      </button>
+    </div>
+  </header>
+
+
+  <!-- Todo-section Start -->
+  <section class="todo-section">
+    <!-- Todo Start -->
+    <div class="todo">
+      <!-- Todo Form Start -->
+      <form class="todo__form">
+          <button class="todo__checkbox todo__checkbox--input"></button>
+          <input type="text" name="todo" class="todo__input"  placeholder="Create a new todo...">
+      </form>
+
+      <!-- Todo List -->
+      <ul class="todo__list">
+        <!-- 1 -->
+        <li class="todo__item">
+          <button class="todo__checkbox"></button>
+          <p class="todo__task">jog</p>
+          <button class="todo__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete/X symbol icon">
+          </button>
+        </li>
+        <!-- 2 -->
+        <li class="todo__item">
+          <button class="todo__checkbox"></button>
+          <p class="todo__task">jo3x</p>
+          <button class="todo__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete/X symbol icon">
+          </button>
+        </li>
+        <!-- 3 -->
+        <li class="todo__item">
+          <button class="todo__checkbox"></button>
+          <p class="todo__task">jog arou</p>
+          <button class="todo__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete/X symbol icon">
+          </button>
+        </li>
+        <!-- 4 -->
+        <li class="todo__item">
+          <button class="todo__checkbox"></button>
+          <p class="todo__task">jog around the park 3x</p>
+          <button class="todo__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete/X symbol icon">
+          </button>
+        </li>
+        <!-- 5 -->
+        <li class="todo__item">
+          <button class="todo__checkbox"></button>
+          <p class="todo__task">jog around the park 3x</p>
+          <button class="todo__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete/X symbol icon">
+          </button>
+        </li>
+        <!-- 6 -->
+        <li class="todo__item">
+          <button class="todo__checkbox"></button>
+          <p class="todo__task">jog around the park 3x</p>
+          <button class="todo__btn-delete">
+            <img src="./images/icon-cross.svg" alt="delete/X symbol icon">
+          </button>
+        </li>
+        <!-- 7/Footer -->
+        <li class="todo__item todo__item--footer">
+          <p>
+            <span class="todo__items-count">5</span>
+            <span>items left</span>
+          </p>
+
+          <div class="todo__btns">
+            <button class="todo__btn-all btn-active">All</button>
+            <button class="todo__btn-active">Active</button>
+            <button class="todo__btn-complited">Complited</button>
+          </div>
+
+          <button class="todo__btn-clear">Clear Complited</button>
+        </li>
+      </ul> <!-- Todo List End-->
+      <p>Drag and drop to reorder list</p>
+    </div> <!-- Todo End-->
+  </section> <!-- Todo-section End-->
+
+
+
+
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+</body>
+</html>
